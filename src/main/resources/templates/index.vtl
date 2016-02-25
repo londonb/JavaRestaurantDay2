@@ -35,4 +35,9 @@
 #end
 
 <a href="/cuisines">View all Cuisines</a>
-<a href="/restaurants">View all Restaurants</a>
+<!-- <a href="/restaurants">View all Restaurants</a> -->
+
+#foreach($restaurant in $restaurants)
+<h3><a href="/restaurants/$restaurant.getId()">$restaurant.getName()</a></h3>
+
+#end

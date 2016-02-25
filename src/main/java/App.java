@@ -91,15 +91,6 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    // get("/restaurants/:id/deleted", (request, reponse) -> {
-    //   HashMap<String, Object> model = new HashMap<String, Object>();
-    //   Restaurant restaurant = Restaurant.find(Integer.parseInt(request.params(":id")));
-    //   restaurant.delete();
-    //   model.put("restaurant", restaurant);
-    //   model.put("template", "templates/delete.vtl");
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
-
     post("/restaurants/:id/deleted", (request, reponse) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       Restaurant restaurant = Restaurant.find(Integer.parseInt(request.params(":id")));
