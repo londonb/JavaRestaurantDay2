@@ -11,6 +11,8 @@
   <button type="submit" class="btn btn-success" id= "submitCuisine">Add Cuisine</button>
 </form>
 
+<a href="/cuisines">View all Cuisines</a>
+
 #if($cuisines.size() > 0)
 <br>
 <br>
@@ -34,7 +36,7 @@
 </form>
 #end
 
-<a href="/cuisines">View all Cuisines</a>
+
 <!-- <a href="/restaurants">View all Restaurants</a> -->
 
 #foreach($restaurant in $restaurants)

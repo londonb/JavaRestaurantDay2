@@ -80,12 +80,12 @@ public class App {
 
     post("/restaurants/:id/updated", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      int id =Integer.parseInt(request.params(":id"));
+      // int id =Integer.parseInt(request.params(":id"));
       Restaurant restaurant = Restaurant.find(Integer.parseInt(request.params(":id")));
-      Cuisine cuisine = Cuisine.find(restaurant.getId());
+      // Cuisine cuisine = Cuisine.find(restaurant.getId());
       String newName = request.queryParams("update");
       restaurant.update(newName);
-      model.put("id", id);
+      // model.put("id", id);
       model.put("restaurant", newName);
       model.put("template", "templates/update.vtl");
       return new ModelAndView(model, layout);

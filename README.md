@@ -5,7 +5,7 @@
 ##### Brad London and Polina Nenchev
 
 ## Description
-This is an application for best Restaurants that list different cuisines. 
+This is an application for best Restaurants that list different cuisines.
 
 ## Setup
 
@@ -24,7 +24,7 @@ $ postgres
 Open a new tab in terminal and create the `best-restaurants` database:
 ```
 $ psql
-$ CREATE DATABASE best_restaurants;
+# CREATE DATABASE best_restaurants;
 $ psql best_restaurants < best_restaurants.sql
 ```
 
