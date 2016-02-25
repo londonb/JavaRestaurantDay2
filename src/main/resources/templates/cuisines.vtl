@@ -1,0 +1,7 @@
+<h1>All Cuisine Types:</h1>
+
+#foreach($cuisine in $cuisines)
+<h3><a href="/cuisines/$cuisine.getId()">$cuisine.getType()</a></h3>
+#end
+
+<a href="/" class="btn btn-primary">Go Home</a>

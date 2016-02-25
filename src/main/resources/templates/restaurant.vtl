@@ -1,0 +1,16 @@
+<h2>Update $restaurant.getName()</h2>
+
+<form class="form-group" action="/restaurants/$restaurant.getId()/updated" method="post">
+  <label for="update">Update Restaurant Name</label>
+  <input type="text" name="update" required>
+  <button type="submit" class="btn btn-success">Update</button>
+</form>
+
+<h2>Delete $restaurant.getName()</h2>
+  <form class="form-group" action="/restaurants/$restaurant.getId()/deleted" method="post">
+    <label for="delete">Delete selected restaurant Name</label>
+      <button type="submit" class="btn btn-danger">Delete</button>
+  </form>
+
+
+<a href="/" class="btn btn-primary">Go Home</a>

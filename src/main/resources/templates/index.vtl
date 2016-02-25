@@ -1,0 +1,38 @@
+
+<h1>Best Restaurant</h1>
+
+<h3>Add a cuisine type:</h3>
+
+<form action="/cuisines" method="post">
+  <div class="form-group">
+    <label for="cuisineType">Cuisine Type</label>
+    <input id="cuisineType" name="cuisineType" type="text" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-success" id= "submitCuisine">Add Cuisine</button>
+</form>
+
+#if($cuisines.size() > 0)
+<br>
+<br>
+<h3> Add restaurant:</h3>
+<form action="/restaurants" method="post">
+
+  <div class="form-group">
+    <label for="cuisineId">Select a Cuisine</label>
+    <select id='cuisineId' name='cuisineId' type='text'>
+    #foreach($cuisine in $cuisines)
+      <option value="$cuisine.getId()">$cuisine.getType()</option>
+    #end
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="restaurantName">Name</label>
+    <input id="restaurantName" name="restaurantName" type="text" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-success">Add restaurant</button>
+</form>
+#end
+
+<a href="/cuisines">View all Cuisines</a>
+<a href="/restaurants">View all Restaurants</a>
